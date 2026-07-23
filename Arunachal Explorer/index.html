@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arunachal Explorer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= Welcome Screen ================= -->
+
+    <div class="welcome-screen">
+
+        <div class="container">
+
+            <div class="glass-card">
+
+                <h1>Welcome to Arunachal Explorer</h1>
+
+                <p>
+                    Explore the Land of the Dawn-Lit Mountains.
+                </p>
+
+                <button id="startBtn">
+                    START EXPLORING
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= Loading Screen ================= -->
+
+    <div class="loading-screen hidden">
+
+        <div class="glass-card">
+
+            <div class="sun-container">
+
+                <div id="sun">
+                    ☀️
+                </div>
+
+            </div>
+
+            <div class="mountains">
+                🏔️🏔️🏔️🏔️🏔️
+            </div>
+
+            <h2>
+                Awaiting Sunrise...
+            </h2>
+
+            <p id="loadingFact">
+                Preparing your expedition...
+            </p>
+
+            <div class="progress-container">
+
+                <div id="progressBar"></div>
+
+            </div>
+
+            <h3 id="percentage">
+                0%
+            </h3>
+
+        </div>
+
+    </div>
+
+    <!-- ================= Map Screen ================= -->
+
+    <div class="map-screen hidden">
+
+        <div class="map-header">
+
+            <h1>Arunachal Explorer</h1>
+
+            <p>Click a glowing marker to begin your journey.</p>
+
+        </div>
+
+        <div class="map-layout">
+
+            <!-- Sidebar (closed by default, opens on pin click) -->
+
+            <div class="sidebar" id="sidebar">
+
+                <button id="closeSidebar" class="close-btn">&times;</button>
+
+                <h2 id="placeTitle">Welcome</h2>
+
+                <p id="placeDescription">Click a location on the map to learn more.</p>
+
+                <a id="knowMoreBtn" class="know-more-btn" href="#" target="_blank" rel="noopener">
+                    Know More →
+                </a>
+
+            </div>
+
+            <!-- Map -->
+
+            <div class="map-container">
+
+                <img
+                    src="assets/images/arunachal-map.png"
+                    alt="Arunachal Pradesh"
+                    id="arunachalMap">
+
+                <!-- Glowing Pins -->
+                
+                <button class="pin" id="tawang" data-place="tawang" title="Tawang"></button>
+
+                <button class="pin" id="bomdila" data-place="bomdila" title="Bomdila"></button>
+
+                <button class="pin" id="ziro" data-place="ziro" title="Ziro Valley"></button>
+
+                <button class="pin" id="itanagar" data-place="itanagar" title="Itanagar"></button>
+
+                <button class="pin" id="namdapha" data-place="namdapha" title="Namdapha"></button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
