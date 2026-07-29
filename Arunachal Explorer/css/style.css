@@ -463,7 +463,8 @@ button:hover{
     position:absolute;
     bottom:130%;
     left:50%;
-    transform:translateX(-50%) translateY(6px) rotate(45deg); ;
+
+    transform:translateX(-50%) translateY(6px) rotate(45deg);   /* ← added rotate(45deg) */
 
     background:rgba(0,0,0,.75);
     backdrop-filter:blur(8px);
@@ -481,6 +482,9 @@ button:hover{
 }
 
 .pin:hover::after{
+
     opacity:1;
-    transform:translateX(-50%) translateY(0);
+
+    transform:translateX(-50%) translateY(0) rotate(45deg);   /* ← same rotate(45deg) added here too */
+
 }
