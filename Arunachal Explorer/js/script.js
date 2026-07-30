@@ -164,3 +164,36 @@ closeSidebarBtn.addEventListener("click", function () {
     sidebar.classList.remove("active");
 
 });
+
+const places = {
+
+    tawang:{
+        title:"🏯 Tawang",
+        description:"Tawang is famous for the magnificent Tawang Monastery, breathtaking mountains, and peaceful landscapes.",
+        query:"Tawang, Arunachal Pradesh",
+        image:"assets/images/tawang.jpg"    // ← new
+    },
+
+    // ...same pattern for ziro, itanagar, bomdila, namdapha,
+    //    each pointing to their own photo filename
+};
+
+document.querySelectorAll(".pin").forEach(function (pin) {
+
+    pin.addEventListener("click", function () {
+
+        const place = places[this.dataset.place];
+
+        placeImage.src = place.image;    // ← new: sets which photo shows
+        placeImage.alt = place.title;    // ← new: accessibility text
+
+        placeTitle.textContent = place.title;
+        placeDescription.textContent = place.description;
+
+        knowMoreBtn.href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(place.query);
+
+        sidebar.classList.add("active");
+
+    });
+
+});
